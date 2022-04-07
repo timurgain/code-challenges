@@ -1,26 +1,21 @@
 """G. Гардероб / Wardrobe, counting sort."""
 
 
-TYPES = 3
+ITEMS = {
+    '0': 0,
+    '1': 0,
+    '2': 0,
+}
 
 
-def read_input():
+def read_input_and_counting_sort():
     amount = int(input())
-    dresses = list(map(int, list(input().strip().split())))
-    return amount, dresses
-
-
-def counting_sort(clothes):
-    items = [0] * TYPES
-    for dress in dresses:
-        items[dress] += 1
-
-    for i in range(0, len(items)):
-        while items[i] > 0:
-            print(i, end=' ')
-            items[i] -= 1
+    if amount > 0:
+        for item in input().split(' '):
+            ITEMS[item] += 1
+        for item, count in ITEMS.items():
+            print((item + ' ') * count, end='')
 
 
 if __name__ == '__main__':
-    amount, dresses = read_input()
-    counting_sort(dresses)
+    read_input_and_counting_sort()
