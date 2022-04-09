@@ -1,5 +1,9 @@
 """B. Эффективная быстрая сортировка / Efficient quicksort
-ID принятого решения в Яндекс.Контест: 67126472."""
+ID принятого решения в Яндекс.Контест: 67129205."""
+
+from collections import namedtuple
+
+Member = namedtuple('Member', ['name', 'solved', 'errors'])
 
 
 def read_input():
@@ -8,8 +12,8 @@ def read_input():
     rows = 0
     members = []
     while rows < n:
-        user, solved, errors = input().split()
-        members.append(list((user, int(solved), int(errors))))
+        name, solved, errors = input().split()
+        members.append(Member(name, int(solved), int(errors)))
         rows += 1
     return members
 
@@ -17,14 +21,15 @@ def read_input():
 def output(members: list) -> str:
     """Outputs a result into a console."""
     for i in range(len(members)-1, -1, -1):
-        print(members[i][0])
+        print(members[i].name)
 
 
 def low_lt_high(low: list, high: list) -> bool:
     """Compares two members, if low < high returns True."""
-    if low[1] == high[1]:
-        return low[0] > high[0] if low[2] == high[2] else low[2] > high[2]
-    return low[1] < high[1]
+    if low.solved == high.solved:
+        return (low.name > high.name if low.errors == high.errors
+                else low.errors > high.errors)
+    return low.solved < high.solved
 
 
 def quick_sort(members: list, base_left: int = None, base_right: int = None):
@@ -37,7 +42,7 @@ def quick_sort(members: list, base_left: int = None, base_right: int = None):
     if base_left >= base_right:
         return members
 
-    # pivot
+    # pivot - let it be a middle
     mid = (base_left + base_right) // 2
     pivot = members[mid]
 
