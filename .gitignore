@@ -1,3 +1,5 @@
+### Python ###
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +129,24 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+### JavaScript ###
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+package-lock.json
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.DS_Store
+.idea
+.vscode
+.env

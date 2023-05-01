@@ -1,5 +1,5 @@
 def prime_finder(n):
-    # Write your code here
+    """Prime Number Finder."""
     result = []
     if n <= 1:
         return result
