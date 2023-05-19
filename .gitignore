@@ -150,3 +150,6 @@ package-lock.json
 .idea
 .vscode
 .env
+
+### TypeScript ###
+typescript-codecademy/*/*.js

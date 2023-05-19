@@ -11,7 +11,7 @@ export const restaurants = [
  },
  {
    name: "Nikko's Rotisserie Chicken 🍗",
-   priceBracket: PriceBracket.Low,
+   priceBracket: PriceBracket.low,
    deliveryTimeMinutes: 20,
    openHour: "12",
    closeHour: "21",
@@ -27,7 +27,7 @@ export const restaurants = [
  },
  {
    name: "Lula Bagel 🥯",
-   priceBracket: PriceBracket.Low,
+   priceBracket: PriceBracket.low,
    deliveryTimeMinutes: 20,
    openHour: "0",
    closeHour: "12",
@@ -43,4 +43,4 @@ export const restaurants = [
  },
 ];
 ​
-export type Restaurant = typeof restaurants[0][0];
+export type Restaurant = typeof restaurants[0];
