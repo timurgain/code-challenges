@@ -1,6 +1,6 @@
-from typing import Union
+from typing import Callable
 
-def outer(tp: str) -> Union[list, tuple]:
+def outer(tp: str) -> Callable:
     """Reads the type, then the data, then converts the data into the type."""
     def inner(data: str):
         res_gen = map(int, data.split(' '))

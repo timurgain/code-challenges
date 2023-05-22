@@ -1,6 +1,6 @@
-from typing import Generator, Iterable
+from typing import Iterable
 
-def multiply_collections(a: Iterable[int], b: Iterable[int]) -> Generator:
+def multiply_collections(a: Iterable[int], b: Iterable[int]) -> Iterable:
     """Multiplies items in two collections."""
     return map(lambda x: x[0] * x[1], [*zip(a, b)])
 

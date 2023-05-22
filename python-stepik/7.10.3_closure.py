@@ -1,4 +1,6 @@
-def counter_add(n: int) -> int:
+from typing import Callable
+
+def counter_add(n: int) -> Callable:
     def adder(j: int) -> int:
         return j + n
     return adder
