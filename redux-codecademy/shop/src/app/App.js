@@ -3,8 +3,8 @@ import React from 'react';
 import { Inventory } from '../features/inventory/Invetory';
 import { CurrencyFilter } from '../features/currencyFilter/CurrencyFilter.js';
 import { Cart } from '../features/cart/Cart.js';
+import { SearchTerm } from '../features/searchTerm/SearchTerm';
 
-// Render the Cart component below <Inventory />
 export const App = (props) => {
 
   const { state, dispatch } = props;
@@ -16,9 +16,15 @@ export const App = (props) => {
         dispatch={dispatch}
       />
 
+      <SearchTerm
+        searchTerm={state.searchTerm}
+        dispatch={dispatch}
+      />
+
       <Inventory
         inventory={state.inventory}
         currencyFilter={state.currencyFilter}
+        searchTerm={state.searchTerm}
         dispatch={dispatch}
       />
 
