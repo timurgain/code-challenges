@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@types/jest": "^29.5.12",
-    "axios": "^1.6.8"
+    "axios": "^1.6.8",
+    "uuid": "^9.0.1"
   }
 }

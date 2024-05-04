@@ -6,7 +6,7 @@ const spyConsoleLog = jest.spyOn(console, "error");
 
 describe("getToDos", () => {
 
-  aftereach(() => {
+  afterEach(() => {
     jest.clearAllMocks();
   })
 

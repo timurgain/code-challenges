@@ -16,7 +16,7 @@ var isPalindrome = function(x) {
     mirrorNum = mirrorNum*10 + x%10
     x = Math.floor(x/10);
   }
-  return (mirrorNum === sourceNum) ? true : false;
+  return mirrorNum === sourceNum;
 };
 
 

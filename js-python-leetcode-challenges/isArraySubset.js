@@ -17,7 +17,7 @@ function isArraySubset(source, subset) {
 }
 
 
-a = [2, 3, 5, 8, 14] 
+a = [2, 3, 5, 8, 14]
 b = [5, 8, 2, 8]
 
 console.log(isArraySubset(a, b))

@@ -1,4 +1,4 @@
-def prime_finder(n):
+def prime_finder(n: int) -> list[int]:
     """Prime Number Finder."""
     result = []
     if n <= 1:
