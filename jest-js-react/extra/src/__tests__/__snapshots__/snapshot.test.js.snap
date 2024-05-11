@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createUser should create a user with all the properties 1`] = `
+{
+  "age": 30,
+  "email": "e@em.com",
+  "name": "John",
+  "password": "hashed-password",
+  "surname": "Doe",
+  "type": "USER",
+}
+`;
+
+exports[`createUser should create a user with name and surname only 1`] = `
+{
+  "age": 18,
+  "email": "",
+  "name": "John",
+  "password": "hashed-password",
+  "surname": "Doe",
+  "type": "USER",
+}
+`;
